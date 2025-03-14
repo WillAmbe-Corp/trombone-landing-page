@@ -1,0 +1,21 @@
+nav, .navlink ul{
+    display: flex;
+}
+nav{
+    justify-content: space-between;
+}
+.navlink ul li a{
+    text-decoration: none;
+    color: #333;
+}
+.navlink ul li{
+    list-style: none;
+}
+.pricing{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.terms, .copy-right{
+    display: flex;
+    justify-content: flex-end;
+}
