@@ -1,8 +1,23 @@
-nav, .navlink ul{
+*{
+    padding: 0;
+    margin: 0;
+}
+nav, .navlink ul, nav, .logo, .feature, .pricing, .trombone .info, .trombone button, .terms, .copy-right{
     display: flex;
 }
+nav, .navlink ul{
+    gap: 20px;
+    justify-content: end;
+    margin-top: 30px;
+    margin-right: 25px;
+    font-family: "Lato", sans-serif;
+}
 nav{
+    margin-top: -5px;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
 }
 .navlink ul li a{
     text-decoration: none;
@@ -11,11 +26,169 @@ nav{
 .navlink ul li{
     list-style: none;
 }
+.logo{
+    margin: 20px;
+    justify-content: start;
+    gap: 15px;
+}
+.logo h3{
+    font-size: 23px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    margin-top: 5px;
+}
+.icon{
+    width: 50px;
+    height: 45px;
+    transform: rotate(35deg);
+}
+#search-bar{
+    text-align: center;
+    font-family: sans-serif;
+}
+#search-bar h1{  
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+#search-bar input{
+    height: 35px;
+    width: 300px;
+    padding-left: 5px;
+    background-color: #fff;
+    margin-bottom: 15px;
+    border: 1px solid;
+}
+#search-bar input:hover{
+    border: 1.2px solid rgb(147, 208, 255);
+}
+#search-bar button{
+    width: 160px;
+    height: 35px;
+    font-weight: 900;
+    font-size: 15px;
+    border-radius: 2px;
+}
+button{
+    background-color: rgb(252, 201, 60);
+    border: 1px solid rgb(252, 201, 60);
+}
+button, #search-bar input, .video-container{
+    cursor: pointer;
+}
+#search-bar button:hover, .trombone button:hover{
+    background-color: rgb(255, 187, 0);
+    border: solid rgb(255, 187, 0) 2px;
+}
+#features{
+    margin-top: 130px;
+    margin-left: 190px; 
+    font-family: sans-serif;
+}
+.feature{
+    margin-bottom: 60px;
+}
+.premium .text{
+    margin-left: 23px;
+}
+.feature-icon i{
+    font-size: 50px;
+    color: rgb(255, 145, 0);
+    margin-right: 50px;
+    margin-top: 10px;
+}
+.video-container{
+    text-align: center;
+    margin-bottom: 50px;
+}
 .pricing{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 30px;
+}
+.trombone{
+    width: 300px;
+    height: 350px;
+    border: 1px solid black;
+    font-family: "lato", sans-serif;
+    border-radius: 5px;
+}
+.trombone h3{
+    background-color: #e9e9e9;
+    height: 30px;
+    text-align: center;
+    font-weight: 700;
+    padding-top: 20px;
+    font-size: 17px;
+}
+.trombone .price{
+    text-align: center;
+    font-weight: 700;
+    padding: 20px 0;
+    font-size: 20px;
+}
+.trombone .info{
+    justify-content: center;
+    text-align: center;
+    padding: 0 90px;
+    line-height: 30px;
+}
+.trombone button{
+    margin-top: 25px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    justify-self: center;
+}
+.foot-info{
+    width: 1000px;
+    padding: 10px 15px;
+    background-color: #e9e9e9;
+    margin: auto;
+    border-radius: 4px;
+    font-family: "lato", sans-serif;
+}
+.terms{
+    gap: 25px;
+}
+.copy-right{
+    color: #7f7f7f;
+    margin-top: 8px;
 }
 .terms, .copy-right{
-    display: flex;
+    line-height: 20px;
     justify-content: flex-end;
+}
+
+@media (max-width: 720px) {
+    nav{
+        margin-left: 30px;
+        font-size: 14px;
+        color: #272727;
+        margin-bottom: 20px;
+    }
+    .logo h3{
+        font-size: 20px;
+    }
+    .logo img{
+        width: 35px;
+        height: 35px;
+    }
+    nav, .navlink ul{
+        margin-right: 1px;
+    }
+    #search-bar{
+        margin-left: 30px;
+    }
+    #features{
+        margin-left: 50px;
+    }
+    .video-container{
+        margin-left: 40px;
+    }
+    .pricing{
+        display: grid;
+        grid-template-rows: repeat(1, 1fr);
+    }
+    .foot-info{
+        width: 92.5vw;
+    }
 }
